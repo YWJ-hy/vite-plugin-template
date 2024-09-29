@@ -1,0 +1,28 @@
+{
+  "name": "vite-plugin-template",
+  "version": "1.0.0",
+  "description": "A vite plugin template",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "pnpm run build --watch --ignore-watch playground",
+    "build": "tsup src/index.ts --dts --format cjs,esm",
+    "prepublishOnly": "npm run build",
+    "release": "bumpp && npm publish",
+    "play:vue3": "pnpm run --filter vue3 dev"
+  },
+  "keywords": [
+    "vite",
+    "plugin"
+  ],
+  "author": "YWJ-hy",
+  "license": "MIT",
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.7.3",
+    "@types/node": "^22.7.4",
+    "bumpp": "^9.6.1",
+    "eslint": "^9.11.1",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.2",
+    "vite": "*"
+  }
+}
