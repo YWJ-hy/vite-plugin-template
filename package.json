@@ -1,8 +1,39 @@
 {
   "name": "vite-plugin-template",
   "version": "1.0.0",
+  "packageManager": "pnpm@7.0.0",
   "description": "A vite plugin template",
+  "author": "YWJ-hy",
+  "license": "MIT",
+  "homepage": "https://github.com/YWJ-hy/vite-plugin-template#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YWJ-hy/vite-plugin-template"
+  },
+  "bugs": {
+    "url": "https://github.com/YWJ-hy/vite-plugin-template/issues"
+  },
+  "keywords": [
+    "vite",
+    "plugin"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
   "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=14",
+    "pnpm": ">=7.0.0"
+  },
   "scripts": {
     "dev": "pnpm run build --watch --ignore-watch playground",
     "build": "tsup src/index.ts --dts --format cjs,esm",
@@ -10,12 +41,9 @@
     "release": "bumpp && npm publish",
     "play:vue3": "pnpm run --filter vue3 dev"
   },
-  "keywords": [
-    "vite",
-    "plugin"
-  ],
-  "author": "YWJ-hy",
-  "license": "MIT",
+  "peerDependencies": {
+    "vite": ">2.0.0-0"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^3.7.3",
     "@types/node": "^22.7.4",
