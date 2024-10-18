@@ -1,7 +1,6 @@
 {
   "name": "vite-plugin-template",
   "version": "1.0.0",
-  "packageManager": "pnpm@7.0.0",
   "description": "A vite plugin template",
   "author": "YWJ-hy",
   "license": "MIT",
@@ -31,8 +30,7 @@
     "dist"
   ],
   "engines": {
-    "node": ">=14",
-    "pnpm": ">=7.0.0"
+    "node": ">=14"
   },
   "scripts": {
     "dev": "pnpm run build --watch --ignore-watch playground",
